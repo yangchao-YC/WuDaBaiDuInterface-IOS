@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9F8D5A3-239F-41DA-B52B-053CCF034B04</string>
+	<key>IDESourceControlProjectName</key>
+	<string>武大接口问答</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B49F1737-7960-419E-8A93-534DDCB42CEC</key>
+		<string>https://github.com/yangchao-YC/WuDaBaiDuInterface-IOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>武大接口问答.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B49F1737-7960-419E-8A93-534DDCB42CEC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yangchao-YC/WuDaBaiDuInterface-IOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B49F1737-7960-419E-8A93-534DDCB42CEC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B49F1737-7960-419E-8A93-534DDCB42CEC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WuDaBaiDuInterface-IOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
