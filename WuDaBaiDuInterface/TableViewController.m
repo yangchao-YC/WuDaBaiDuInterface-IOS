@@ -15,6 +15,7 @@
 
 
 @property(nonatomic,retain)NSMutableArray *articles;
+@property(nonatomic,retain)NSMutableArray *date;
 @property(nonatomic,strong)ASIHTTPRequest *request;
 
 @end
@@ -63,9 +64,8 @@
     id rs = [NSJSONSerialization JSONObjectWithData:request.responseData options:NSJSONReadingAllowFragments error:&error];
     
     self.articles = rs;
-    
     [self removeHUDInfo];
-    [self.tableView reloadData];
+    [self noDate];
 }
 
 -(void)requestFailed:(ASIHTTPRequest *)request
@@ -75,15 +75,55 @@
     [alert show];
 }
 
+//未回答问题
+-(void)noDate
+{
+
+    for (int i = 0; i<self.articles.count; i++) {
+        NSDictionary *dic = [self.articles objectAtIndex:i];
+        NSString *status = [NSString stringWithFormat:@"%@",[dic objectForKey:@"status"]];
+        if ([status isEqualToString:@"0"]) {
+            NSLog(@"%d",i);
+            NSLog(@"%@",[dic objectForKey:@"title"]);
+            [self.date addObject:dic];
+        }
+    }
+    
+    NSLog(@"%d",self.date.count);
+    
+    for (int i = 0; i<self.date.count; i++) {
+        NSDictionary *dic = [self.date objectAtIndex:i];
+        NSLog(@"%@",[dic objectForKey:@"title"]);
+
+    }
+    
+    [self.tableView reloadData];
+    
+    
+}
+//以回答问题
+-(void)okDate
+{
+
+    for (int i = 0; i<self.articles.count; i++) {
+        NSDictionary *dic = [self.articles objectAtIndex:i];
+        NSString *status = [NSString stringWithFormat:@"%@",[dic objectForKey:@"status"]];
+        if ([status isEqualToString:@"1"]) {
+            [self.date addObject:dic];
+        }
+    }
+    
+    [self.tableView reloadData];
+    
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
     static NSString *cellID = @"TableViewCell";
-
     
     UITableViewCell *cell;
-    
-    
     
     cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     if (!cell) {
@@ -92,7 +132,7 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;//去除点击高亮显示
     
-    NSDictionary *dic = [self.articles objectAtIndex:indexPath.row];
+    NSDictionary *dic = [self.date objectAtIndex:indexPath.row];
     
     TableViewCell *table =(TableViewCell *)cell;
     table.UILabel_Title.text = [dic objectForKey:@"title"];
@@ -107,7 +147,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.articles.count;//设置显示行数
+    return self.date.count;//设置显示行数
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -128,7 +168,7 @@
     UIAlertView * alert = [[UIAlertView alloc ]initWithTitle:@"提示" message:[NSString stringWithFormat:@"%li",indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] ;
     [alert show];
     */
-    NSDictionary *dic = [self.articles objectAtIndex:indexPath.row];
+    NSDictionary *dic = [self.date objectAtIndex:indexPath.row];
     
     [self performSegueWithIdentifier:@"Detailed" sender:dic];
     
