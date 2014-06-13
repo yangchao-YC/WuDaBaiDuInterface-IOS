@@ -42,7 +42,7 @@
     
     
     
-    
+    self.date = [[NSMutableArray alloc]init];
     [self dateURLTable];
 }
 
@@ -83,20 +83,9 @@
         NSDictionary *dic = [self.articles objectAtIndex:i];
         NSString *status = [NSString stringWithFormat:@"%@",[dic objectForKey:@"status"]];
         if ([status isEqualToString:@"0"]) {
-            NSLog(@"%d",i);
-            NSLog(@"%@",[dic objectForKey:@"title"]);
             [self.date addObject:dic];
         }
     }
-    
-    NSLog(@"%d",self.date.count);
-    
-    for (int i = 0; i<self.date.count; i++) {
-        NSDictionary *dic = [self.date objectAtIndex:i];
-        NSLog(@"%@",[dic objectForKey:@"title"]);
-
-    }
-    
     [self.tableView reloadData];
     
     
