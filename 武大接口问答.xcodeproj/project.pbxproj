@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711CD663194DE38300B1A141 /* points_cell_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 711CD661194DE38300B1A141 /* points_cell_button.png */; };
+		711CD664194DE38300B1A141 /* points_cell_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 711CD662194DE38300B1A141 /* points_cell_button@2x.png */; };
 		712F13CC19232DD10087D5EA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 712F13CB19232DD10087D5EA /* TableViewCell.m */; };
+		7135D3A9194ED36A00812486 /* OkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7135D3A8194ED36A00812486 /* OkViewController.m */; };
+		7135D3AC194ED39D00812486 /* OkAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7135D3AB194ED39D00812486 /* OkAnswerViewController.m */; };
 		713BEF12192488A4006D36FD /* btn_bg_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BEF10192488A4006D36FD /* btn_bg_back.png */; };
 		713BEF13192488A4006D36FD /* btn_bg_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BEF11192488A4006D36FD /* btn_bg_back@2x.png */; };
 		713BEF161924BE6F006D36FD /* answer_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BEF141924BE6F006D36FD /* answer_white.png */; };
@@ -69,8 +73,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711CD661194DE38300B1A141 /* points_cell_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points_cell_button.png; sourceTree = "<group>"; };
+		711CD662194DE38300B1A141 /* points_cell_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "points_cell_button@2x.png"; sourceTree = "<group>"; };
 		712F13CA19232DD10087D5EA /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		712F13CB19232DD10087D5EA /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		7135D3A7194ED36A00812486 /* OkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkViewController.h; sourceTree = "<group>"; };
+		7135D3A8194ED36A00812486 /* OkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkViewController.m; sourceTree = "<group>"; };
+		7135D3AA194ED39D00812486 /* OkAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkAnswerViewController.h; sourceTree = "<group>"; };
+		7135D3AB194ED39D00812486 /* OkAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkAnswerViewController.m; sourceTree = "<group>"; };
 		713BEF10192488A4006D36FD /* btn_bg_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_bg_back.png; sourceTree = "<group>"; };
 		713BEF11192488A4006D36FD /* btn_bg_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bg_back@2x.png"; sourceTree = "<group>"; };
 		713BEF141924BE6F006D36FD /* answer_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answer_white.png; sourceTree = "<group>"; };
@@ -239,6 +249,10 @@
 				717B2CFC1921F173008319A5 /* ViewController.m */,
 				717B2D4B19221139008319A5 /* TableViewController.h */,
 				717B2D4C19221139008319A5 /* TableViewController.m */,
+				7135D3A7194ED36A00812486 /* OkViewController.h */,
+				7135D3A8194ED36A00812486 /* OkViewController.m */,
+				7135D3AA194ED39D00812486 /* OkAnswerViewController.h */,
+				7135D3AB194ED39D00812486 /* OkAnswerViewController.m */,
 				717B2D4E1922115E008319A5 /* DetailedViewController.h */,
 				717B2D4F1922115E008319A5 /* DetailedViewController.m */,
 				717B2D5119221176008319A5 /* AnswerViewController.h */,
@@ -281,6 +295,8 @@
 		717B2D3A1921F7B1008319A5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				711CD661194DE38300B1A141 /* points_cell_button.png */,
+				711CD662194DE38300B1A141 /* points_cell_button@2x.png */,
 				713BEF141924BE6F006D36FD /* answer_white.png */,
 				713BEF151924BE6F006D36FD /* answer_white@2x.png */,
 				713BEF10192488A4006D36FD /* btn_bg_back.png */,
@@ -413,6 +429,7 @@
 				717B2CFA1921F173008319A5 /* Main.storyboard in Resources */,
 				717B2D491921F81D008319A5 /* btn_green.png in Resources */,
 				717B2D4A1921F81D008319A5 /* btn_green@2x.png in Resources */,
+				711CD664194DE38300B1A141 /* points_cell_button@2x.png in Resources */,
 				717B2D421921F802008319A5 /* login@2x.png in Resources */,
 				717B2D561922154C008319A5 /* answer_black.png in Resources */,
 				717B2D5A19222C13008319A5 /* icon.png in Resources */,
@@ -422,6 +439,7 @@
 				717B2D571922154C008319A5 /* answer_black@2x.png in Resources */,
 				713BEF161924BE6F006D36FD /* answer_white.png in Resources */,
 				717B2D481921F81D008319A5 /* btn_bg_blue@2x.png in Resources */,
+				711CD663194DE38300B1A141 /* points_cell_button.png in Resources */,
 				717B2D3D1921F7BC008319A5 /* home_bg.png in Resources */,
 				713BEF12192488A4006D36FD /* btn_bg_back.png in Resources */,
 				717B2D5B19222C13008319A5 /* icon@2x.png in Resources */,
@@ -443,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7135D3A9194ED36A00812486 /* OkViewController.m in Sources */,
 				717B2D5319221176008319A5 /* AnswerViewController.m in Sources */,
 				717B2D7819222E20008319A5 /* ASINSStringAdditions.m in Sources */,
 				717B2D501922115E008319A5 /* DetailedViewController.m in Sources */,
@@ -458,6 +477,7 @@
 				717B2D7619222E20008319A5 /* ASIInputStream.m in Sources */,
 				717B2D7719222E20008319A5 /* ASINetworkQueue.m in Sources */,
 				717B2D7219222E20008319A5 /* ASIAuthenticationDialog.m in Sources */,
+				7135D3AC194ED39D00812486 /* OkAnswerViewController.m in Sources */,
 				712F13CC19232DD10087D5EA /* TableViewCell.m in Sources */,
 				717B2D7519222E20008319A5 /* ASIHTTPRequestTwo.m in Sources */,
 				717B2CF31921F173008319A5 /* main.m in Sources */,

@@ -78,7 +78,7 @@
 //未回答问题
 -(void)noDate
 {
-
+    
     for (int i = 0; i<self.articles.count; i++) {
         NSDictionary *dic = [self.articles objectAtIndex:i];
         NSString *status = [NSString stringWithFormat:@"%@",[dic objectForKey:@"status"]];
@@ -93,7 +93,7 @@
 //以回答问题
 -(void)okDate
 {
-
+    
     for (int i = 0; i<self.articles.count; i++) {
         NSDictionary *dic = [self.articles objectAtIndex:i];
         NSString *status = [NSString stringWithFormat:@"%@",[dic objectForKey:@"status"]];
@@ -125,8 +125,8 @@
     
     TableViewCell *table =(TableViewCell *)cell;
     table.UILabel_Title.text = [dic objectForKey:@"title"];
-   // table.UILabel_Content.text = [dic objectForKey:@"content"];
 
+    
     return cell;
     
     
@@ -154,12 +154,18 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     /*
-    UIAlertView * alert = [[UIAlertView alloc ]initWithTitle:@"提示" message:[NSString stringWithFormat:@"%li",indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] ;
-    [alert show];
-    */
+     UIAlertView * alert = [[UIAlertView alloc ]initWithTitle:@"提示" message:[NSString stringWithFormat:@"%li",indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] ;
+     [alert show];
+     */
     NSDictionary *dic = [self.date objectAtIndex:indexPath.row];
     
-    [self performSegueWithIdentifier:@"Detailed" sender:dic];
+    if (self.tableBtn.tag == 1) {
+        [self performSegueWithIdentifier:@"Detailed" sender:dic];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"Ok" sender:dic];
+    }
     
     
 }
@@ -167,9 +173,28 @@
 
 -(IBAction)TableBtn:(UIButton *)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
-    
+    switch (sender.tag) {
+        case 0:
+            [self.navigationController popViewControllerAnimated:YES];
 
+            break;
+        case 1:
+            sender.tag = 2;
+            [sender setTitle:@"未回答" forState:UIControlStateNormal];
+            [self.date removeAllObjects];
+            [self okDate];
+            break;
+        case 2:
+            sender.tag = 1;
+            [sender setTitle:@"以回答" forState:UIControlStateNormal];
+            [self.date removeAllObjects];
+            [self noDate];
+            break;
+        default:
+            break;
+    }
+    
+    
     
 }
 

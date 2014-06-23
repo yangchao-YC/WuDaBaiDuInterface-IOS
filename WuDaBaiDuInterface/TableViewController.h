@@ -10,5 +10,6 @@
 #import "ASIHTTPRequest.h"
 @interface TableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,ASIHTTPRequestDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *tableBtn;
 @property(strong,nonatomic)NSString *key;
 @end
