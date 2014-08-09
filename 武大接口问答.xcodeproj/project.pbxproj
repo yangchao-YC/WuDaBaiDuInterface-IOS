@@ -18,6 +18,8 @@
 		713BEF171924BE6F006D36FD /* answer_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BEF151924BE6F006D36FD /* answer_white@2x.png */; };
 		713BEF1D1924C408006D36FD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BEF1A1924C408006D36FD /* MBProgressHUD.m */; };
 		713BEF1E1924C408006D36FD /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BEF1C1924C408006D36FD /* UIViewController+HUD.m */; };
+		717400561995F31F004926CE /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 717400541995F31F004926CE /* icon120.png */; };
+		717400571995F31F004926CE /* icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 717400551995F31F004926CE /* icon120@2x.png */; };
 		717B2CE71921F173008319A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B2CE61921F173008319A5 /* Foundation.framework */; };
 		717B2CE91921F173008319A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B2CE81921F173008319A5 /* CoreGraphics.framework */; };
 		717B2CEB1921F173008319A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717B2CEA1921F173008319A5 /* UIKit.framework */; };
@@ -89,6 +91,8 @@
 		713BEF1A1924C408006D36FD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		713BEF1B1924C408006D36FD /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		713BEF1C1924C408006D36FD /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		717400541995F31F004926CE /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		717400551995F31F004926CE /* icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon120@2x.png"; sourceTree = "<group>"; };
 		717B2CE31921F173008319A5 /* 武大接口问答.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "武大接口问答.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B2CE61921F173008319A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		717B2CE81921F173008319A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -295,6 +299,8 @@
 		717B2D3A1921F7B1008319A5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				717400541995F31F004926CE /* icon120.png */,
+				717400551995F31F004926CE /* icon120@2x.png */,
 				711CD661194DE38300B1A141 /* points_cell_button.png */,
 				711CD662194DE38300B1A141 /* points_cell_button@2x.png */,
 				713BEF141924BE6F006D36FD /* answer_white.png */,
@@ -436,10 +442,12 @@
 				717B2D471921F81D008319A5 /* btn_bg_blue.png in Resources */,
 				713BEF171924BE6F006D36FD /* answer_white@2x.png in Resources */,
 				717B2D3E1921F7BC008319A5 /* home_bg@2x.png in Resources */,
+				717400571995F31F004926CE /* icon120@2x.png in Resources */,
 				717B2D571922154C008319A5 /* answer_black@2x.png in Resources */,
 				713BEF161924BE6F006D36FD /* answer_white.png in Resources */,
 				717B2D481921F81D008319A5 /* btn_bg_blue@2x.png in Resources */,
 				711CD663194DE38300B1A141 /* points_cell_button.png in Resources */,
+				717400561995F31F004926CE /* icon120.png in Resources */,
 				717B2D3D1921F7BC008319A5 /* home_bg.png in Resources */,
 				713BEF12192488A4006D36FD /* btn_bg_back.png in Resources */,
 				717B2D5B19222C13008319A5 /* icon@2x.png in Resources */,
@@ -603,7 +611,6 @@
 		717B2D161921F173008319A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WuDaBaiDuInterface/武大接口问答-Prefix.pch";
@@ -617,7 +624,6 @@
 		717B2D171921F173008319A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WuDaBaiDuInterface/武大接口问答-Prefix.pch";
